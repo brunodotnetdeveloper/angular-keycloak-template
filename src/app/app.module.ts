@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
-        url: 'http://localhost:8080',
-        realm: 'master',
+        url: 'http://localhost:8081',
+        realm: 'n-sec',
         clientId: 'angular-client',
       },
       initOptions: {
@@ -21,14 +22,15 @@ function initializeKeycloak(keycloak: KeycloakService) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     KeycloakAngularModule,
   ],
-  providers: [ 
+  providers: [
     {
     provide: APP_INITIALIZER,
     useFactory: initializeKeycloak,

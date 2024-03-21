@@ -1,0 +1,130 @@
+<!-- Main navbar -->
+<div class="navbar navbar-dark navbar-expand-lg navbar-static">
+  <div class="container-fluid">
+    <div class="navbar-brand">
+      <a href="/" class="d-inline-flex align-items-center">
+        <img src="assets/images/logo_icon.svg" alt="">
+        <img src="assets/images/logo_text_light.svg" class="d-none d-sm-inline-block h-16px ms-3" alt="">
+      </a>
+    </div>
+
+    <ul class="nav flex-row">
+      <li class="nav-item d-lg-none">
+        <a href="#navbar_search" class="navbar-nav-link navbar-nav-link-icon rounded-pill" data-bs-toggle="collapse">
+          <i class="ph-magnifying-glass"></i>
+        </a>
+      </li>
+
+      <li class="nav-item nav-item-dropdown-lg dropdown">
+        <a href="#" class="navbar-nav-link navbar-nav-link-icon rounded-pill" data-bs-toggle="dropdown">
+          <i class="ph-squares-four"></i>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-scrollable-sm wmin-lg-600 p-0">
+          <div class="d-flex align-items-center border-bottom p-3">
+            <h6 class="mb-0">Navegar por aplicativos</h6>
+            <a href="#" class="ms-auto">
+              Visualizar todos
+              <i class="ph-arrow-circle-right ms-1"></i>
+            </a>
+          </div>
+
+          <div class="row row-cols-1 row-cols-sm-2 g-0">
+            <div class="col">
+              <button type="button"
+                class="dropdown-item text-wrap h-100 align-items-start border-end-sm border-bottom p-3">
+                <div>
+                  <img src="assets/images/demo/logos/4.svg" class="h-40px mb-2" alt="">
+                  <a href="http://localhost:8081" target="_blank">
+                    <div class="fw-semibold my-1">N-SEC</div>
+                    <div class="text-muted">Painel do Administrador N-SEC</div>
+                  </a>
+                </div>
+              </button>
+            </div>
+
+            <div class="col">
+              <button type="button" class="dropdown-item text-wrap h-100 align-items-start border-bottom p-3">
+                <div>
+                  <img src="assets/images/demo/logos/2.svg" class="h-40px mb-2" alt="">
+                  <div class="fw-semibold my-1">Encurtador de Url</div>
+                  <div class="text-muted">Encurtador de Url</div>
+                </div>
+              </button>
+            </div>
+
+            <div class="col">
+              <button type="button"
+                class="dropdown-item text-wrap h-100 align-items-start border-end-sm border-bottom border-bottom-sm-0 rounded-bottom-start p-3">
+                <div>
+                  <img src="assets/images/demo/logos/3.svg" class="h-40px mb-2" alt="">
+                  <div class="fw-semibold my-1">Neutral</div>
+                  <div class="text-muted">Painel Administrativo do Neutral</div>
+                </div>
+              </button>
+            </div>
+
+            <div class="col">
+              <button type="button" class="dropdown-item text-wrap h-100 align-items-start rounded-bottom-end p-3">
+                <div>
+                  <img src="assets/images/demo/logos/4.svg" class="h-40px mb-2" alt="">
+                  <div class="fw-semibold my-1">Data privacy</div>
+                  <div class="text-muted">Automated provisioning of non-production datasets</div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="nav flex-row justify-content-end order-1 order-lg-2">
+    <li class="nav-item nav-item-dropdown-lg dropdown ms-lg-2">
+      <a href="#" class="navbar-nav-link align-items-center rounded-pill p-1" data-bs-toggle="dropdown">
+        <div class="status-indicator-container">
+          <img src="assets/images/demo/users/face11.jpg" class="w-32px h-32px rounded-pill" alt="">
+          <span class="status-indicator bg-success"></span>
+        </div>
+        <span class="d-none d-lg-inline-block mx-lg-2">{{agentProfile.firstName}}</span>
+      </a>
+
+      <div class="dropdown-menu dropdown-menu-end">
+        <a href="http://localhost:8081/realms/n-sec/account/" class="dropdown-item" target="_blank">
+          <i class="ph-user-circle me-2"></i>
+          Meu Perfil
+        </a>
+        <a href="#" (click)="logout()" class="dropdown-item">
+          <i class="ph-sign-out me-2"></i>
+          Logout
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- /main navbar -->
+<div class="navbar navbar-sm shadow">
+  <div class="container-fluid">
+    <div class="flex-fill overflow-auto overflow-lg-visible scrollbar-hidden">
+      <ul class="nav gap-1 flex-nowrap flex-lg-wrap">
+        <li class="nav-item">
+          <a href="#" class="navbar-nav-link rounded active">
+            <i class="ph-house me-2"></i>
+            Home
+          </a>
+        </li>
+        <li class="nav-item nav-item-dropdown-lg dropdown">
+          <a href="#" class="navbar-nav-link dropdown-toggle rounded" data-bs-toggle="dropdown">
+            <i class="ph-note-blank me-2"></i>
+            Menu Primário
+          </a>
+
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item rounded">Menu Secundário</a>
+            <a href="#" class="dropdown-item rounded">Menu Secundário</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
